@@ -1,17 +1,338 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SaaS & Software Html5 Landing Page"/>
+    <meta name="keywords"
+          content="agency, bootstrap, business, corporate, creative, landing page, marketing, multipurpose, product, product launch, responsive, software, startup, startup landing page"/>
+    <meta name="author" content="ThemesBoss"/>
+    <title>{% block title %}PischonSoft - Logiciel de gestion pour les micro entreprise!{% endblock %}</title>
+    <link rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    {% block stylesheets %}
+    {% endblock %}
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+
+    <style>
+        .mockup {
+            text-align: center;
+            padding: 0px;
+            margin-top: -110px;
+            margin-left: 100px;
+        }
+
+        .gb-headline {
+            text-transform: uppercase;
+            text-align: left;
+            color: rgb(0, 158, 224);
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 1.4em;
+            margin-bottom: 30px;
+        }
+        {
+        h2.gb-headline-35cef2c6 {
+            font-size: 20px;
+            text-transform: uppercase;
+            text-align: left;
+            margin-bottom: 0;
+            color: #00a0e3;
+        }
+        }
+        .gb-headline2 {
+            font-size: 20px;
+            text-transform: uppercase;
+            text-align: left;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: #f0c24d;}
+        .desc{
+            text-align: justify;
+            margin-bottom: 1.7em;
+            font-size: 18px;
+        }
+        .custom-nav .sign_btn {
+            background-color: #f0c24d !important;
+            border-radius: 100px !important;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    </style>
+    {% block javascripts %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
+    {% endblock %}
+</head>
+<body>
+<!--Navbar Start-->
+<nav class="navbar navbar-expand-lg fixed-top custom-nav sticky">
+    <div class="container">
+        <!-- LOGO -->
+        <a class="logo navbar-brand" href="index.html">
+            <img src="assets/images/logo.png" alt="" class="img-fluid logo-light">
+            <img src="assets/images/logo-dark.png" alt="" class="img-fluid logo-dark">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="mdi mdi-menu"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mx-auto navbar-center" id="mySidenav">
+                <li class="nav-item active">
+                    <a href="#home" class="nav-link"><i class="mdi mdi-home-outline"></i> Fonctionalités</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link"><i class="mdi mdi-chart-bubble"></i> Tarif</a>
+                </li>
+
+            </ul>
+            <div class="hide_phone">
+                <a href="https://pischonsoft.com/app" class="btn btn-sm log_btn">Connexion</a>
+                <a href="#" class="btn btn-sm sign_btn btn-rounded navbar-btn">Creer un compte</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+<!--Start Home-->
+<section class="home-bg-img home_side_img" id="home"
+         style="background-image: url({{ asset('uploads/slider/slider.png') }})">
+    <div class="bg-overlay"></div>
+    <div class="container-fluid">
+        <div class="row vertical-content">
+            <div class="col-lg-7">
+                <div class="text-white mt-3 text-center">
+                    {#                        <div class="small_title"> #}
+                    {#                            <p class="mb-0 text-uppercase">Pischon<span class="text-custom">S</span>oft</p> #}
+                    {#                        </div> #}
+                    <h1 class="header_title mx-auto mt-4 mb-0 fw-normal mt-5">LE MEILLEUR <span class="fw-bold">LOGICIEL DE GESTION </span>
+                        <br>
+                        POUR LES ENTREPRISES</h1>
+                    <div class="header_btn mt-3">
+                        <a href="javascript:void(0)" class="btn btn-custom me-3">15 JOURS D'ESSAI GRATUIT</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 offset-lg-6">
+                <div class="mockup">
+                    <img src="{{ asset('uploads/slider/screen.webp') }}" alt="" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Home-->
+<section>
+    <div class="container">
+        <div class="row mt-5 vertical-content">
+            <div class="col-lg-4">
+                <div class="text-center features_img mt-3">
+                    <img src="{{ asset('uploads/screeshoot/scrreen.jpeg') }}" alt="" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="mt-3">
+                    <div class="features_detail mt-4">
+                        <h2 class="fw-bold gb-headline">Un logiciel micro entreprise clair et complet !</h2>
+                        <div class="features_border mt-3 mb-2"></div>
+                        <p class="desc mt-3 features_desc">
+                            Vous êtes habitué en tant qu’auto-entrepreneur à jongler entre votre partie gestion
+                            professionnelle (relation clients, prestations à réaliser…) et votre partie gestion micro
+                            entreprise pure (devis, factures, déclarations…). Voici ce que permet notre application pour
+                            toute la partie gestion qui est souvent fastidieuse !
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Start About -->
+<section class="section mt-5" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="about_boxes mt-3 text-center rounded p-4">
+                    <div class="about_icon">
+                        <i class="mdi mdi-airplay text-custom"></i>
+                    </div>
+                    <div class="about_content mt-4">
+                        <h5 class="fw-bold">Calcul de vos charges sociales</h5>
+                        <p class="text-muted mb-0 mt-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <div class="mt-3 about_btn">
+                            <a href="javascript:void(0)"><i class="mdi mdi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="about_boxes active mt-3 text-center rounded p-4">
+                    <div class="about_icon">
+                        <i class="mdi mdi-share-variant text-custom"></i>
+                    </div>
+                    <div class="about_content mt-4">
+                        <h5 class="fw-bold">Gagnez du temps</h5>
+                        <p class="text-muted mb-0 mt-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <div class="mt-3 about_btn">
+                            <a href="javascript:void(0)"><i class="mdi mdi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="about_boxes mt-3 text-center rounded p-4">
+                    <div class="about_icon">
+                        <i class="mdi mdi-monitor-cellphone text-custom"></i>
+                    </div>
+                    <div class="about_content mt-4">
+                        <h5 class="fw-bold">Les obligations légales</h5>
+                        <p class="text-muted mb-0 mt-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <div class="mt-3 about_btn">
+                            <a href="javascript:void(0)"><i class="mdi mdi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About -->
+<!-- Start Features -->
+<section class="section bg-light" id="features" style="background-image: url({{ asset('uploads/screeshoot/background.png') }});background-blend-mode: difference;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section_title text-center">
+                    <div class="section_title_icon">
+                        <i class="mdi mdi-google-circles-extended"></i>
+                    </div>
+                    <h2 class="mt-3 text-center gb-headline text-capitalize fw-bold">PRINCIPALES FONCTIONNALITES</h2>
+{#                    <p class="text-muted section_subtitle mx-auto">#}
+{#                        Ce que comprends notre logiciel#}
+{#                    </p>#}
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 vertical-content">
+            <div class="col-lg-6">
+                <div class="text-center features_img mt-3">
+                    <img src="{{ asset('uploads/screeshoot/test.PNG') }}" alt="" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="features_one mt-3">
+
+                    <div class="features_detail mt-4">
+
+                        <h4 class="fw-bold gb-headline">Vos devis & factures</h4>
+                        <div class="features_border mt-3 mb-2"></div>
+                        <div class="features_list mt-3">
+                            <p class="mb-2"><span></span> We put a lot of effort in design.</p>
+                            <p class="mb-2"><span></span> Submit Your Orgnization.</p>
+                            <p class="mb-2"><span></span> Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                            <p class="mb-2"><span></span> The most important ingredient of successful website.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 vertical-content">
+            <div class="col-lg-6">
+                <div class="features_one mt-3">
+                    <div class="features_detail mt-4">
+                        <h4 class="fw-bold gb-headline2">DES TABLEAUX DE BORD CONÇU POUR PILOTER VOTRE ACTIVITÉ DE BOUT EN BOUT</h4>
+                        <div class="features_border mt-3 mb-2"></div>
+                        <div class="features_list mt-3">
+                            <p class="mb-2"><span></span> We put a lot of effort in design.</p>
+                            <p class="mb-2"><span></span> Submit Your Orgnization.</p>
+                            <p class="mb-2"><span></span> Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                            <p class="mb-2"><span></span> The most important ingredient of successful website.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center features_img mt-3">
+                    <img src="{{ asset('uploads/screeshoot/tb.jpeg') }}" alt="" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 vertical-content">
+            <div class="col-lg-6">
+                <div class="text-center features_img mt-3">
+                    <img src="{{ asset('uploads/screeshoot/agenda.png') }}" alt="" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="features_one mt-3">
+                    <div class="features_detail mt-4">
+                        <h4 class="fw-bold gb-headline">Agenda</h4>
+                        <div class="features_border mt-3 mb-2"></div>
+                        <div class="features_list mt-3">
+                            <p class="mb-2"><span></span> We put a lot of effort in design.</p>
+                            <p class="mb-2"><span></span> Submit Your Orgnization.</p>
+                            <p class="mb-2"><span></span> Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                            <p class="mb-2"><span></span> The most important ingredient of successful website.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 vertical-content">
+            <div class="col-lg-6">
+                <div class="features_one mt-3">
+                    <div class="features_detail mt-4">
+                        <h4 class="fw-bold gb-headline2">Stock</h4>
+                        <div class="features_border mt-3 mb-2"></div>
+                        <div class="features_list mt-3">
+                            <p class="mb-2"><span></span> We put a lot of effort in design.</p>
+                            <p class="mb-2"><span></span> Submit Your Orgnization.</p>
+                            <p class="mb-2"><span></span> Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                            <p class="mb-2"><span></span> The most important ingredient of successful website.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center features_img mt-3">
+                    <img src="{{ asset('uploads/screeshoot/tb.jpeg') }}" alt="" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 vertical-content">
+            <div class="col-lg-6">
+                <div class="text-center features_img mt-3">
+                    <img src="{{ asset('uploads/screeshoot/agenda.png') }}" alt="" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="features_one mt-3">
+                    <div class="features_detail mt-4">
+                        <h4 class="fw-bold gb-headline">Pilotage</h4>
+                        <div class="features_border mt-3 mb-2"></div>
+                        <div class="features_list mt-3">
+                            <p class="mb-2"><span></span> We put a lot of effort in design.</p>
+                            <p class="mb-2"><span></span> Submit Your Orgnization.</p>
+                            <p class="mb-2"><span></span> Sed ut perspiciatis unde omnis iste natus error sit.</p>
+                            <p class="mb-2"><span></span> The most important ingredient of successful website.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Features -->
+{% block body %}{% endblock %}
+</body>
 </html>
